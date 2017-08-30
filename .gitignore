@@ -1,0 +1,17 @@
+.DS_Store
+
+.Thumb
+
+.idea
+
+*.iml
+
+.vscode
+
+node_modules
+
+npm-debug.log*
+
+/src/static/data
+
+/dist
