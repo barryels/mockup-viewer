@@ -7,7 +7,7 @@
     "clean": "rimraf dist && mkdirp dist",
     "ui_server:start": "http-server dist -p 9001 -c 1",
     "watch:all": "npm-run-all --parallel ui_server:start lint:src:watch build:src:watch copy_static_files:src:watch",
-    "build:src:watch": "watchify src/index.js --debug -o dist/bundle.js -v",
+    "build:src:watch": "watchify src/app/index.js --debug -o dist/bundle.js -v",
     "copy_static_files:src": "cpx \"src/static/**/*.{html,css,svg,png,jpg,gif,woff,eot,ttf,txt,json,xml}\" dist",
     "copy_static_files:src:watch": "nodemon --watch src/static --ext html,css,svg,png,jpg,gif,woff,eot,ttf,txt,json,xml --exec \"npm run copy_static_files:src\"",
     "lint:src": "node ./node_modules/.bin/eslint --ignore-path .eslintignore src/**",
